@@ -13,21 +13,21 @@
     </head>
     <body class="sb-nav-fixed">
         {{-- navbar --}}
-        @include('home.navbar')
+        @include('template.separate.navbar')
         {{-- end navbar --}}
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 {{-- sidebar --}}
-                @include('home.sidebar')
+                @include('template.separate.sidebar')
                 {{-- end sidebar --}}
             </div>
             <div id="layoutSidenav_content">
                 {{-- main --}}
-                @include('home.main')
+                @include('template.separate.main')
                 {{-- end main --}}
 
                 {{-- footer --}}
-                @include('home.footer')
+                @include('template.separate.footer')
                 {{-- end footer --}}
             </div>
         </div>

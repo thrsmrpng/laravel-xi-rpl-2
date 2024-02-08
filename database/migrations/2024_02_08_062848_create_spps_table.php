@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('masyarakat', function (Blueprint $table) {
-            $table->char('nik', 16)->primary();
-            $table->string('nama', 35);
-            $table->string('username', 25);
-            $table->string('password', 32);
-            $table->string('telepon', 13);
+        Schema::create('spps', function (Blueprint $table) {
+            $table->id('id_spp');
+            $table->integer('tahun');
+            $table->integer('nominal');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('masyarakat');
+        Schema::dropIfExists('spps');
     }
 };

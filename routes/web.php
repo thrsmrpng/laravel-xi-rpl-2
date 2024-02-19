@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SppController;
+use App\Http\Controllers\KelasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +36,15 @@ Route::controller(SppController::class)->group(function () {
     Route::delete('/Spp/{id}', 'destroy')->name('Spp.destroy');
 });
 
+
+Route::controller(SppController::class)->group(function () {
+    Route::get('/Spp', 'index')->name('Spp.index');
+    Route::get('/Spp/create', 'create')->name('Spp.create');
+    Route::post('/Spp', 'store')->name('Spp.store');
+    Route::get('/Spp/{id}/edit', 'edit')->name('Spp.edit');
+    Route::put('/Spp/{id}', 'update')->name('Spp.update');
+    Route::delete('/Spp/{id}', 'destroy')->name('Spp.destroy');
+});
+
+Route::resource('/kelas', KelasController::class);
 
